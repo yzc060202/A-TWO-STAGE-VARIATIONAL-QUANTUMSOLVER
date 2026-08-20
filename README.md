@@ -13,7 +13,7 @@ Stage-I projected-block compilation
 freeze learned operator
         |
         v
-Stage-II fresh direct-r optimization
+Stage-II optimization
         |
         v
 reconstructed PDE solution
