@@ -1,0 +1,12 @@
+results_root: results
+mode: paper_direct64_crosspde_section_4_3
+pdes: [poisson, reaction_diffusion, convection_diffusion]
+run_production_quantum: false
+generator:
+  feature_count: 64
+  collocation_count: 64
+  feature_seed: 7061015
+  alpha: 50.0
+  construction: DIRECT64_REGENERATED
+stage1_config: configs/paper/stage1_block11_direct64.yaml
+stage2_config: configs/paper/direct64_stage2_fresh_direct_r.yaml

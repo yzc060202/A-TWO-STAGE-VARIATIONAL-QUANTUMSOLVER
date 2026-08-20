@@ -1,0 +1,8 @@
+results_root: results
+pdes: [poisson, reaction_diffusion, convection_diffusion]
+feature_count: 200
+feature_seed: 7061015
+alpha: 50.0
+dense_points: 4096
+canonicalize_svd_signs: true
+mode: historical_64x200_to_64x64_reproduction

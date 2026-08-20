@@ -1,0 +1,30 @@
+results_root: results
+mode: paper_stage2_fresh_direct_r
+generator:
+  feature_count: 64
+  feature_seed: 7061015
+  alpha: 50.0
+  dense_points: 4096
+  construction: DIRECT64_REGENERATED
+family: alternating_ry_cnot
+target_parameters: 24
+production_capacity_ladder: [1800, 2400, 3000]
+smoke_only: true
+theta0_seed: 13379
+init_scale: 0.70
+protocol: fresh_direct_r
+objective: direct_r
+initialization: fresh
+warm_start: false
+smoke_maxiter: 3
+smoke_maxfun: 12
+optimizer:
+  name: L-BFGS-B
+  protocol: fresh_direct_r
+  objective: direct_r
+  maxiter: 30000
+  maxfun: 60000
+  maxcor: 100
+  maxls: 150
+  ftol: 1.0e-16
+  gtol: 1.0e-12

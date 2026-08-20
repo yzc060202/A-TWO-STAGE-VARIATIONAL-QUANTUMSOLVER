@@ -1,0 +1,24 @@
+results_root: results
+mode: paper_stage1_direct64
+generator:
+  feature_count: 64
+  feature_seed: 7061015
+  alpha: 50.0
+  dense_points: 4096
+  construction: DIRECT64_REGENERATED
+family: vcbe_block11_real
+target_parameters: 6013
+smoke_only: true
+optimizer:
+  name: full_basis_adam_refined_v1
+  historical_name: full_basis_chunked_adam
+  theta0_seed: 2026072202
+  init_scale: 0.02
+  steps: 20
+  production_steps: 1000
+  lr: 0.04
+  final_multiplier: 0.12
+  chunk_size: 8
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-8

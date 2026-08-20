@@ -1,0 +1,7 @@
+results_root: results
+pdes: [poisson, reaction_diffusion, convection_diffusion]
+feature_seed: 7061015
+alpha: 50.0
+dense_points: 4096
+canonicalize_svd_signs: true
+mode: direct64_classical_diagnostic

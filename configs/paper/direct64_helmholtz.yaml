@@ -1,0 +1,26 @@
+results_root: results
+mode: paper_direct64_helmholtz_section_4_2
+pdes: [helmholtz_control]
+generator:
+  feature_count: 64
+  collocation_count: 64
+  feature_seed: 7061015
+  alpha: 50.0
+  construction: DIRECT64_REGENERATED
+stage1:
+  family: vcbe_block11_real
+  repetitions: 143
+  actual_parameters: 6013
+  optimizer: full_basis_adam_refined_v1
+  theta0_seed: 2026072202
+  init_scale: 0.02
+  steps: 1000
+stage2:
+  family: alternating_ry_cnot
+  target_parameters: 2400
+  optimizer: L-BFGS-B
+  objective: direct_r
+  initialization: fresh
+  warm_start: false
+  theta0_seed: 13379
+  init_scale: 0.70

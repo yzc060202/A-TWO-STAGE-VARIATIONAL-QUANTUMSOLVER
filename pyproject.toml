@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refined-twostage"
+version = "0.1.0"
+description = "Direct64 two-stage RFM reproduction framework for paper experiments"
+requires-python = ">=3.7"
+dependencies = ["numpy", "scipy", "pyyaml"]
+
+[project.scripts]
+refined-twostage = "refined_twostage.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "provenance: optional tests that require external historical artifacts",
+]

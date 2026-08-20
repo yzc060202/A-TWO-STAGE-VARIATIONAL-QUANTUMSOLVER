@@ -1,0 +1,21 @@
+results_root: results
+mode: historical_optional_r2_then_r
+family: alternating_ry_cnot
+target_parameters: 24
+production_capacity_ladder: [1800, 2400, 3000]
+smoke_only: true
+theta0_seed: 13379
+init_scale: 0.70
+smoke_maxiter: 3
+smoke_maxfun: 12
+optimizer:
+  name: lbfgsb_r2_then_r_refined_v1
+  protocol: historical_r2_then_r
+  phase1_objective: direct_r2
+  phase2_objective: direct_r
+  maxiter: 30000
+  maxfun: 60000
+  maxcor: 100
+  maxls: 150
+  ftol: 1.0e-16
+  gtol: 1.0e-12
